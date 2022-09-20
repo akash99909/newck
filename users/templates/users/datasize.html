@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+ 
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h1>Here I am</h1>
+    
+    <form action = "http://127.0.0.1:8000/" method="POST" >
+        {% csrf_token %}
+        <div class="newColumn">
+            <input name="sen[]" style="width: 100px;">
+            <input name="sen1[]" style="width: 100px;">
+            <input name="sen2[]" style="width: 100px;">
+            <input name="sen3[]" style="width: 100px;">
+            <input name="sen4[]" style="width: 100px;">
+            <input name="sen5[]" style="width: 100px;">
+            <input name="sen6[]" style="width: 100px;">
+            <input name="sen7[]" style="width: 100px;">
+            <input name="sen8[]" style="width: 100px;">
+            <input name="sen9[]" style="width: 100px;">
+            <input name="sen10[]" style="width: 100px;">
+            <input name="sen11[]" style="width: 100px;">
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+
+ 
+
+   <button onclick="addRows()">Add New Column </button>
+
+ 
+
+</body>
+</html>
+<script>
+
+ 
+
+   function abc(a, b) {
+
+ 
+
+       return a * b;
+    }
+
+ 
+
+   function addRows() {
+        s = document.getElementsByClassName("newColumn");
+        obj = document.createElement("div");
+        obj.innerHTML = '<input name="sen[]"style="width: 100px;"><input name="sen1[]"style="width: 100px;"><input name="sen2[]"style="width: 100px;"><input name="sen3[]"style="width: 100px;"><input name="sen4[]"style="width: 100px;"><input name="sen5[]"style="width: 100px;"><input name="sen6[]"style="width: 100px;"><input name="sen7[]"style="width: 100px;"><input name="sen8[]"style="width: 100px;"><input name="sen9[]"style="width: 100px;"><input name="sen10[]"style="width: 100px;"><input name="sen11[]"style="width: 100px;">';
+        s[0].appendChild(obj)
+    }
+
+ 
+
+</script>
